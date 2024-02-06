@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import HomePage from "./assets/components/HomePage";
-import RQSuperHerosPage from "./assets/components/RQSuperHerosPage";
-import SuperHerosPage from "./assets/components/SuperHerosPage";
+import HomePage from "./components/HomePage";
+import RQSuperHerosPage from "./components/RQSuperHerosPage";
+import SuperHerosPage from "./components/SuperHerosPage";
 
 const queryClient = new QueryClient();
 

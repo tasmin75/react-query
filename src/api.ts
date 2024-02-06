@@ -1,5 +1,5 @@
 import axios from "axios";
-import Todo from "./assets/components/Todo";
+import Todo from "./components/Todo";
 
 const API_BASE_URL = "https://jsonplaceholder.typicode.com/todos";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery, useMutation, QueryClient } from "react-query";
-import { fetchTodos, addTodo, updateTodo, deleteTodo } from "../../api";
+import { fetchTodos, addTodo, updateTodo, deleteTodo } from "../api";
 import Todo from "./Todo";
 
 const Todos: React.FC = () => {
