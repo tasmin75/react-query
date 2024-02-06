@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
-import {ReactQueryDevtools} from 'react-query/devtools'
-import HomePage from "./components/HomePage";
-import RQSuperHerosPage from "./components/RQSuperHerosPage";
-import SuperHerosPage from "./components/SuperHerosPage";
+import { ReactQueryDevtools } from "react-query/devtools";
+import HomePage from "./assets/components/HomePage";
+import RQSuperHerosPage from "./assets/components/RQSuperHerosPage";
+import SuperHerosPage from "./assets/components/SuperHerosPage";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +32,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <ReactQueryDevtools initialIsOpen={false} position="bottom-right"/>
+      <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
     </QueryClientProvider>
   );
 }
