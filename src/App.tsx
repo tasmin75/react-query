@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import HomePage from "./components/HomePage";
 import RQSuperHerosPage from "./components/RQSuperHerosPage";
 import SuperHerosPage from "./components/SuperHerosPage";
+import TodoList from "./components/TodoList";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/super-heros" element={<SuperHerosPage />} />
             <Route path="/rq-super-heros" element={<RQSuperHerosPage />} />
+            <Route path="/to-do-list" element={<TodoList />} />
             <Route path="/" element={<HomePage />} />
           </Routes>
         </div>
