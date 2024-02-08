@@ -29,6 +29,49 @@ export const updateTodo = async ({
   return response.data;
 };
 
+interface Post {
+  id: number;
+  // Add other properties based on your Post type
+  title: string;
+  content: string;
+}
+
+const fetchPosts = async (page?: number): Promise<Post[]> => {
+  const response = await fetch(
+    `http://localhost:3000/posts?_sort=-id${
+      page ? `&_page=${page}&_per_page=5` : ""
+    }`
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch posts. Status: ${response.status}`);
+  }
+
+  const postData = await response.json();
+  return postData;
+};
+
+const fetchTags = async (): Promise<string[]> => {
+  const response = await fetch("http://localhost:3000/tags");
+  const tagsData = await response.json();
+  return tagsData;
+};
+
+const addPost = async (post: Post): Promise<Post> => {
+  const response = await fetch("http://localhost:3000/posts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(post),
+  });
+
+  const addedPost = await response.json();
+  return addedPost;
+};
+
+export { fetchPosts, fetchTags, addPost };
+
 export const deleteTodo = async (id: number): Promise<void> => {
   await axios.delete(`${API_BASE_URL}/${id}`);
 };

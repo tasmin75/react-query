@@ -53,11 +53,26 @@ const Todos: React.FC = () => {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "20px",
+        padding: "20px",
+        backgroundColor: "rgb(234, 234, 234)",
+        borderRadius: "5px",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+        width: "300px",
+        margin: "auto",
+        marginTop: "20px",
+      }}
+    >
       <h1
         style={{
           fontWeight: "bold",
-          color: "rgb(6, 6, 81",
+          color: "rgb(6, 6, 81)",
         }}
       >
         Todo App
@@ -77,9 +92,9 @@ const Todos: React.FC = () => {
               style={{
                 color: "white",
                 padding: "8px",
-                backgroundColor: "green",
+                backgroundColor: "rgb(6, 6, 81)",
                 border: "none",
-                borderRadius: "2px",
+                borderRadius: "5px",
               }}
               onClick={() => handleUpdateTodo(todo.id, "Updated Text")}
             >
@@ -89,7 +104,7 @@ const Todos: React.FC = () => {
               style={{
                 color: "white",
                 padding: "8px",
-                backgroundColor: "rgb(251, 0, 0)",
+                backgroundColor: "rgb(255, 0, 0)",
                 border: "none",
                 borderRadius: "5px",
               }}
